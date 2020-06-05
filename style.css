@@ -1,3 +1,4 @@
+html,body{margin:0;padding:0;}
 #mainText {
   text-align:center;
   font-family:courier;
@@ -5,4 +6,25 @@
   height: 15px;
   font-size: 18px;
   font-decoration: bold;
+}
+.daddyDiv{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-width: 1000px;
+  min-height: 380px;
+}
+.childDiv{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.babyDiv{
+  float:left;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
