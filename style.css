@@ -64,19 +64,17 @@ ul{
   color: rgb(0, 0, 0);
   display: block;
 }
-
-/* FORM STYLES */
 .contact form{
   /* display: grid; */
   grid-template-columns: 1fr 1fr;
   grid-gap:20px;
   display: block;
-  margin: 10px;
+  margin: 30px;
 }
 
 .contact form label{
   display:block;
-  margin-left: 10px;
+  margin-left: 0px;
   margin-bottom: 2px;
 }
 .titles{
@@ -92,15 +90,11 @@ ul{
   font-size: 16px;
 }
 
-/* .contact form .full{
-    grid-column: 1 / 3;
-} */
-
 .contact form button, .contact form input, .contact form textarea{
   width:100%;
-  padding:1em;
+  padding:0.8em;
   border:1px solid #c9e6ff;
-  margin: 10px;
+  margin: 0px;
   border-radius: 0px 15px 15px 15px;
   margin-bottom: 20px;
   margin-top: 0px;
@@ -120,13 +114,6 @@ ul{
   border-radius: 15px;
 }
 
-.contact form button:hover,.contact form button:focus{
-  background:#92bde7;
-  color:#fff;
-  outline:0;
-  transition: background-color 2s ease-out;
-}
-
 .alert{
   text-align: center;
   padding:10px;
@@ -142,23 +129,72 @@ input, select, textarea {
   font-size: 16px;
 }
 
+#quantity{
+  width: 80px;
+}
+
 #message{
   resize: none;
 }
 
-/* input[type=range]:focus::-webkit-slider-runnable-track {
-  /*background: #ccc;
-} */
+#priceTotal{
+  color:rgb(101, 255, 101);
+  font-size: 30px;
+  text-align: right;
+}
+.priceTotal{
+  font-size: 30px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  text-align: left;
+}
+#greenie{
+  color:rgb(101, 255, 101);
+  text-align: right;
+}
+#redie{
+  color: rgb(255, 153, 0);
+  font-size: 20px;
+  text-align: right;
+}
+.value{
+  font-size: 20px;
+}
+.yOrder{
+  font-size: 30px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  line-height: 1.2;
+  text-align: left;
+}
+.recipt{
+  color:white;
+  text-align:center;
+  margin-bottom: 80px;
+  padding: 30px;
+  font-size: 16px;
+  text-align: left;
+  background: rgba(136, 136, 136, 0);
+  border-radius: 20px;
+  width: 110%;
+  margin-left: -5% !important;
+  margin-top: 20px;
+  font-weight: normal;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 0px 2px rgb(255, 255, 255);
+}
 
-/* 
-/* LARGE SCREENS 
-@media(min-width:700px){
-  .wrapper{
-    /* display: grid; 
-    grid-template-columns: 1fr 2fr;
+@media (max-width:500px){
+  body{
+    margin:0px;
+    padding: 0em;
+    background: black;
   }
-
-  .wrapper > *{
-    padding:2em;
+  
+  .container{
+    margin:0px;
+    padding: 0px;
+    padding: 0em;
+    background: black;
   }
-} */
+}

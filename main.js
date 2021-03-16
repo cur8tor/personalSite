@@ -20,6 +20,36 @@ var messagesRef = firebase.database().ref('messages');
 // Listen for form submit
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
+var quantity = document.getElementById("quantity");
+var price = document.getElementById('quantity');
+var priceTotal = document.getElementById('priceTotal');
+var value = document.getElementById('value');
+var tax = document.getElementById('tax');
+var discount = document.getElementById('discount');
+var delivery = document.getElementById('delivery');
+var yOrder = document.getElementById('yOrder');
+
+
+quantity.oninput = function() {
+  subtotal.innerHTML = ((price.value*5)).toFixed(2);
+  value.innerHTML = ((price.value*13)).toFixed(2);
+  tax.innerHTML = ((((price.value*5)+5)*0.0712).toFixed(2));
+  priceTotal.innerHTML = ((+subtotal.innerHTML)+(+tax.innerHTML)+5).toFixed(2);
+  discount.innerHTML = ((+value.innerHTML)-(+subtotal.innerHTML)).toFixed(2);
+  delivery.innerHTML = (5).toFixed(2);
+  yOrder.innerHTML = price.value;
+}
+
+function onloader(){
+  subtotal.innerHTML = ((price.value*5)).toFixed(2);
+  value.innerHTML = ((price.value*13)).toFixed(2);
+  tax.innerHTML = ((((price.value*5)+5)*0.0712).toFixed(2));
+  priceTotal.innerHTML = ((+subtotal.innerHTML)+(+tax.innerHTML)+5).toFixed(2);
+  discount.innerHTML = ((+value.innerHTML)-(+subtotal.innerHTML)).toFixed(2);
+  delivery.innerHTML = (5.15).toFixed(2);
+  yOrder.innerHTML = price.value;
+}
+
 // Submit form
 function submitForm(e){
   console.log("butttton");

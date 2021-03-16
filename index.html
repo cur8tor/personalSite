@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="onloader()">
   <div>
     <h3 class="alert"><span>Thank you for your order! We will contact you with any further information.</span></h1>
   </div>
@@ -23,8 +23,9 @@
         <div class="alert">Your message has been sent</div>
         <form id="contactForm">
           <p>
-            <label>Quantity 1-10</label>
-            <input type="number" name="quantity" id="quantity" min="1" max="10" required></textarea>
+            <label>Quantity 1-10 ($5 each)</label>
+            <!-- <label class="price" id="price" >$<span id="priceTotal" style="color:rgb(101, 255, 101)">0</span></label> -->
+            <input type="number" value="2" name="quantity" id="quantity" min="1" max="10" required inputmode="numeric" pattern="[0-9]*"></textarea>
           </p>
           <p>
             <label>Name</label>
@@ -46,10 +47,20 @@
             <label>Message</label>
             <textarea name="message" rows="5" id="message"></textarea>
           </p>
+              <label class="recipt">
+              <label class="yOrder"><span id="yOrder">$<span id="yOrder">0</span></span> Martz meal bars</label>
+              <label class="value">value: <span id="redie">$<span id="value">$0</span></span></label>
+              <label class="discount">discount: <span id="greenie">-$<span id="discount">0</span></span></label>
+              <label class="subtotal">subtotal: $<span id="subtotal">0</span></label>
+              <label>estimated shipping: $<span id="delivery">0</span></label>
+              <label class="tax">estimated tax: $<span id="tax">0</span></label>
+              <label class="priceTotal">total: <span id="greenie">$</span><span id="priceTotal">0</span></label>
+            </label>
           <!-- <p class="full">
             <button type="button" id="payment" onclick="payment8()">payment</button>
           </p> -->
-          <p class="full">
+          <label style="margin-bottom:40px;margin-top:40px;text-align:center;color:rgb(255, 215, 86);">PAYMENT IS DUE UPON DELIVERY.<br>CASH OR VENMO ONLY IS ACCEPTED.<br>BY PLACING YOUR ORDER,<br>YOU AGREE TO THESE TERMS.</label>
+          <p class="full" style="margin-top:20px;margin-bottom: 80px;">
             <button type="submit" id="order">order</button>
           </p>
         </form>
