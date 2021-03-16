@@ -1,100 +1,66 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css"/>
-  <title>Tanner Martz</title>
-  <link rel="shortcut icon" type="image/png" href="buk.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Martz Bar Order</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-
 <body>
-<div style="margin-top:20%;">
-  <p id="mainText">hi</p>
-</div>
-<!--
-<div class="trans"></div>
-<div class="daddyDiv">
-<div class="childDiv">
-<div class="babyDiv">
-<!--
-<div style="background-color: #0380ad;">
-<br>
-<p id="mainText2" style="font-size: 30px;">Tanner Martz</p>
-<br><br>
-</div>
+  <div>
+    <h3 class="alert"><span>Thank you for your order! We will contact you with any further information.</span></h1>
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <div class="contact">
+        <div>
+          <h1 class="brand"><span>Martz Bar</span></h1>
+        </div>
+        <h3>Submit your order</h3> 
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Quantity 1-10</label>
+            <input type="number" name="quantity" id="quantity" min="1" max="10" required></textarea>
+          </p>
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone" required>
+          </p>
+          <p class="full">
+            <label>Address for delivery</label>
+            <input type="text" name="address" id="address" required>
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="button" id="payment" onclick="payment8()">payment</button>
+          </p>
+          <p class="full">
+            <button type="submit" id="order">order</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
 
-<!--
-<div style="background:white; color:black; height: 30px;margin-top:20px; margin-bottom:20px;">
-
-<div style="background: white; position:relative; margin-right: 50%; width: 410px; margin-left: 50%;transform: translate(-50%, 0%);">
-<table>
-  <tr>
-    <td>
-      <img src="silverGear.gif" style="height: 40px; width: 40px;">
-    </td>
-    <td id="mainText" style="font-size: 20px; color: white">..
-    </td>
-    <td id="mainText" style="font-size: 20px;">currently working on:
-    </td>
-    <td id="mainText" style="font-size: 20px; color: white">..
-    </td>
-    <td>
-      <img src="silverGear.gif" style="height: 40px; width: 40px; transform: scaleX(-1);">
-    </td>
-  </tr>
-</table>
-</div>
-
-<div style="position:relative; margin-right: 50%; margin-left: 50%; transform: translate(-50%, 0%);">
-</div>
-</div>
-<br>
-<div style="background-color: black; width:450px; position:relative; margin-right: 50%; margin-left: 50%; border-radius: 20px; transform: translate(-50%, 0%);">
-  <br>
-<p id="mainText2" style="font-size: 20px; margin-top:10px;">architectural design for CURATOR HQ</p>
-<br>
-</div>
-<br><br><br>
--->
-<!--
-<br>
-
-<div style="background:white; color:black; height: 30px;margin-top:20px; margin-bottom:20px;">
-<p id="mainText" style="font-size: 20px;">currently working on:</p>
-</div>
-
-<div style="background-color: black; width:450px; border-radius: 20px; position:relative; margin-right: 50%; margin-left: 50%; transform: translate(-50%, 0%);">
-<br>
-<p id="mainText2" style="font-size: 20px;">architectural design for CURATOR HQ</p>
-<br><br>
-</div>
-
-<br>
-<div style="background:white; color:black; height: 30px;margin-top:20px; margin-bottom:20px;">
-<p id="mainText" style="font-size: 20px;">past projects:</p>
-</div>
-
-<div style="background-color: black; width:450px; border-radius: 20px; position:relative; margin-right: 50%; margin-left: 50%; transform: translate(-50%, 0%);">
-<br>
-<p id="mainText2" style="font-size: 20px;"><b>CURATOR</b></p>
-<p id="mainText2" style="font-size: 20px;"><i>www.curator.vision</i></p>
-<p id="mainText2" style="font-size: 20px;">creative design</p>
-<p id="mainText2" style="font-size: 20px;">brand design</p>
-<p id="mainText2" style="font-size: 20px;">logo design</p>
-<p id="mainText2" style="font-size: 20px;">web design</p>
-<p id="mainText2" style="font-size: 20px;">fashion design</p>
-<br><br>
-</div>
-
-
-</div>
-</div>
--->
-<!--
-<img src="gears.gif" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 50%; ">
--->
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
