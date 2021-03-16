@@ -29,11 +29,13 @@ ul{
 
 .brand{
   text-align: center;
+  color: coral;
 }
 
 .brand span{
   color:#fff;
   color: black;
+  color: white;
 }
 
 .wrapper{
@@ -58,6 +60,7 @@ ul{
 .contact{
   background:#f9feff;
   background: rgb(168, 228, 255);
+  background: black;
   color: rgb(0, 0, 0);
   display: block;
 }
@@ -73,10 +76,19 @@ ul{
 
 .contact form label{
   display:block;
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+.titles{
+  text-align: center;
+  color: white;
 }
 
 .contact form p{
   margin:0;
+  color: coral;
+  margin-left: 0px;
+  font-weight: bold;
 }
 
 .contact form .full{
@@ -88,13 +100,17 @@ ul{
   padding:1em;
   border:1px solid #c9e6ff;
   margin: 10px;
+  border-radius: 0px 15px 15px 15px;
+  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .contact form button{
   background:#0a4c85;
   color: white;
   border:0;
-  text-transform: uppercase;
+  background: coral;
+  border-radius: 15px;
 }
 
 .contact form button:hover,.contact form button:focus{
@@ -167,9 +183,5 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
   .wrapper > *{
     padding:2em;
-  }
-
-  .company-info h3, .company-info ul, .brand{
-    text-align: center;
   }
 }
