@@ -110,7 +110,7 @@ function sendEmail(name, email, message, phone, quantity, address){
   Email.send({
     Host: "smtp.gmail.com",
     Username: "tmartzdc@gmail.com",
-    Password: "nbqofwqbpxphjmxl",
+    Password: "",
     To: "tmartzdc@gmail.com",
     From: "tmartzdc@gmail.com",
     Subject: name+" sent you a message",
