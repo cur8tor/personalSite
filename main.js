@@ -41,6 +41,7 @@ quantity.oninput = function() {
 }
 
 function onloader(){
+  console.log("Name: "+"\nEmail: "+"\nMessage: ");
   subtotal.innerHTML = ((price.value*5)).toFixed(2);
   value.innerHTML = ((price.value*13)).toFixed(2);
   tax.innerHTML = ((((price.value*5)+5)*0.0712).toFixed(2));
@@ -77,6 +78,8 @@ function submitForm(e){
 
   // Clear form
   document.getElementById('contactForm').reset();
+
+  sendEmail(name, email, message, phone, quantity, address);
 }
 
 function payment8(){
@@ -101,4 +104,19 @@ function saveMessage(name, address, email, phone, message, quantity){
     quantity:quantity
   });
   console.log("sent!");
+}
+
+function sendEmail(name, email, message, phone, quantity, address){
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "tmartzdc@gmail.com",
+    Password: "nbqofwqbpxphjmxl",
+    To: "tmartzdc@gmail.com",
+    From: "tmartzdc@gmail.com",
+    Subject: name+" sent you a message",
+    Body: "Name: "+name+"\nEmail: "+email+"\nMessage: "+message,
+
+    Body: name+" ordered "+quantity+" bars.\n"+"Email: "+email+"\nPhone: "+phone+"\nMessage: "+message+"\nAddress: "+address,
+
+  }).then((message) => console.log(name+" ordered "+quantity+" bars.\n"+"Email: "+email+"\nPhone: "+phone+"\nMessage: "+message+"\nAddress: "+address))
 }
