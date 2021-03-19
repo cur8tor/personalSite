@@ -29,7 +29,7 @@ ul{
 
 .brand{
   text-align: center;
-  color: coral;
+  color: #03bafc;
 }
 
 .brand span{
@@ -75,7 +75,7 @@ ul{
 .contact form label{
   display:block;
   margin-left: 0px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 .titles{
   text-align: center;
@@ -84,7 +84,8 @@ ul{
 
 .contact form p{
   margin:0;
-  color: coral;
+  color: #03bafc;
+  color: white;
   margin-left: 0px;
   font-weight: bold;
   font-size: 16px;
@@ -100,7 +101,7 @@ ul{
   margin-top: 0px;
   font-size: 16px;
 }
-.contact form input{
+.contact form input, .contact form textarea{
   outline-color: #79c879;
   outline-width: 30px;
   outline: none;
@@ -110,7 +111,7 @@ ul{
   background:#0a4c85;
   color: white;
   border:0;
-  background: coral;
+  background: #03bafc;
   border-radius: 15px;
 }
 
@@ -149,6 +150,10 @@ input, select, textarea {
   text-align: left;
 }
 #greenie{
+  color:rgb(101, 255, 101);
+  text-align: right;
+}
+.greenie{
   color:rgb(101, 255, 101);
   text-align: right;
 }

@@ -28,10 +28,13 @@ var tax = document.getElementById('tax');
 var discount = document.getElementById('discount');
 var delivery = document.getElementById('delivery');
 var yOrder = document.getElementById('yOrder');
+var subtotal = document.getElementById('subtotal');
+//var subtotalTitle = document.getElementById('subtotalTitle');
 
 
 quantity.oninput = function() {
   subtotal.innerHTML = ((price.value*5)).toFixed(2);
+  // subtotalTitle.innerHTML = ((price.value*5)).toFixed(2);
   value.innerHTML = ((price.value*13)).toFixed(2);
   tax.innerHTML = ((((price.value*5)+5)*0.0712).toFixed(2));
   priceTotal.innerHTML = ((+subtotal.innerHTML)+(+tax.innerHTML)+5).toFixed(2);
@@ -41,8 +44,9 @@ quantity.oninput = function() {
 }
 
 function onloader(){
-  console.log("Name: "+"\nEmail: "+"\nMessage: ");
+  //console.log("Name: "+"\nEmail: "+"\nMessage: ");
   subtotal.innerHTML = ((price.value*5)).toFixed(2);
+  // subtotalTitle.innerHTML = ((price.value*5)).toFixed(2);
   value.innerHTML = ((price.value*13)).toFixed(2);
   tax.innerHTML = ((((price.value*5)+5)*0.0712).toFixed(2));
   priceTotal.innerHTML = ((+subtotal.innerHTML)+(+tax.innerHTML)+5).toFixed(2);
@@ -107,16 +111,15 @@ function saveMessage(name, address, email, phone, message, quantity){
 }
 
 function sendEmail(name, email, message, phone, quantity, address){
+
   Email.send({
-    Host: "smtp.gmail.com",
-    Username: "tmartzdc@gmail.com",
-    Password: "",
-    To: "tmartzdc@gmail.com",
-    From: "tmartzdc@gmail.com",
-    Subject: name+" sent you a message",
-    Body: "Name: "+name+"\nEmail: "+email+"\nMessage: "+message,
-
-    Body: name+" ordered "+quantity+" bars.\n"+"Email: "+email+"\nPhone: "+phone+"\nMessage: "+message+"\nAddress: "+address,
-
-  }).then((message) => console.log(name+" ordered "+quantity+" bars.\n"+"Email: "+email+"\nPhone: "+phone+"\nMessage: "+message+"\nAddress: "+address))
+    SecureToken : "b314ed4e-0f5e-4e66-9f9e-c3ffcc607baa",
+    To : 'tmartzdc@gmail.com',
+    From : "tmartzdc@gmail.com",
+    Subject : name + " " + quantity + " bars.",
+    Body : "Name: " +name+ "Quantity: " +quantity+ "Email: " +email+ "Phone: " +phone+ "Address: " +address+ "Message: " +message
+  }).then(
+    message => alert("order sent!")
+  );
 }
+
